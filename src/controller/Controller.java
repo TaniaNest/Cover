@@ -8,23 +8,22 @@ import util.Validator;
 
 public class Controller {
 
-    private Instruction instruction;
-    private Input input;
-    private Info info;
-    private Validator validator;
-
+    Instruction instruction = new Instruction();
+    Input input= new Input();
+    Info info=new Info();
+    Validator validator=new Validator();
     Cover cover=new Cover();
 
     public void run(float a, float b, float c, float d) {
         float number;
         float[] arr = new float[4];
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(new Info().getInfo(i));
+            System.out.print(info.getInfo(i));
             while (arr[i] <= 0) {
-                arr[i] = new Input().getNumber();
-            while (!new Validator().isPositiveNumber(arr[i])) {
+                arr[i] = input.getNumber();
+            while (!validator.isPositiveNumber(arr[i])) {
                 instruction.getInstruction();
-                arr[i] = new Input().getNumber();
+                arr[i] = input.getNumber();
             }
 
             }
@@ -41,8 +40,8 @@ public class Controller {
 
     public void repeat(){
         String exit;
-        System.out.print(new Info().getRequest());
-        exit = new Input().getAnswer();
+        System.out.print(info.getRequest());
+        exit = input.getAnswer();
         if (exit.equals("y") || exit.equals("yes")){
             takenAction();
         }
