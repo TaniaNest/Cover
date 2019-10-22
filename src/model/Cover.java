@@ -2,51 +2,28 @@ package model;
 
 public class Cover {
 
-    private float a;
-    private float b;
-    private float c;
-    private float d;
+    private float width;
+    private float height;
 
-    public Cover(float a, float b, float c, float d) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
+    public Cover(float width, float height) {
+        this.width = width;
+        this.height = height;
     }
 
-    public Cover() {
-
+    public float getWidth() {
+        return width;
     }
 
-    public float getA() {
-        return a;
+    public void setWidth(float width) {
+        this.width = width;
     }
 
-    public void setA(float a) {
-        this.a = a;
+    public float getHeight() {
+        return height;
     }
 
-    public float getB() {
-        return b;
+    public void setHeight(float height) {
+        this.height = height;
     }
 
-    public void setB(float b) {
-        this.b = b;
-    }
-
-    public float getC() {
-        return c;
-    }
-
-    public void setC(float c) {
-        this.c = c;
-    }
-
-    public float getD() {
-        return d;
-    }
-
-    public void setD(float d) {
-        this.d = d;
-    }
 }

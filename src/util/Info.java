@@ -2,13 +2,23 @@ package util;
 
 public class Info {
 
-    public String getInfo(int param) {
+    public void getAnswerYes() {
 
-        return "Input the size" + param+": ";
+        System.out.println("Yes");
     }
 
-    public String getRequest() {
+    public void getAnswerNo() {
 
-        return "Do you want to exit or continue: ";
+        System.out.println("No");
+    }
+
+    public void getInfo() {
+
+        System.out.print("Input the size: ");
+    }
+
+    public void getRequest() {
+
+        System.out.print("Do you want to exit or continue: ");
     }
 }
