@@ -7,13 +7,17 @@ public class Service {
 
     public boolean takenAction(Cover coverOne, Cover coverTwo) {
 
-        if (getBiggestSide(coverOne) > getBiggestSide(coverTwo) && getSmallerSide(coverOne) > getSmallerSide(coverTwo))
+        if (getBiggestSide(coverOne) > getBiggestSide(coverTwo) && getSmallerSide(coverOne) > getSmallerSide(coverTwo)) {
             return true;
-        else if (getBiggestSide(coverOne) < getBiggestSide(coverTwo) && getSmallerSide(coverOne) < getSmallerSide(coverTwo))
+        } else if (getBiggestSide(coverOne) < getBiggestSide(coverTwo) && getSmallerSide(coverOne) < getSmallerSide(coverTwo)) {
             return true;
-        else if (getBiggestSide(coverTwo) >= getDiagonal(coverOne)) return true;
-        else if (getBiggestSide(coverOne) >= getDiagonal(coverTwo)) return true;
-        else return false;
+        } else if (getBiggestSide(coverTwo) >= getDiagonal(coverOne)) {
+            return true;
+        } else if (getBiggestSide(coverOne) >= getDiagonal(coverTwo)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private float getSmallerSide(Cover cover) {
