@@ -12,34 +12,25 @@ public class CoverService {
             return true;
         } else if (getBiggestSide(coverTwo) >= getDiagonal(coverOne)) {
             return true;
-        } else if (getBiggestSide(coverOne) >= getDiagonal(coverTwo)) {
-            return true;
-        } else {
-            return false;
-        }
+        } else return getBiggestSide(coverOne) >= getDiagonal(coverTwo);
     }
 
     private float getSmallerSide(CoverModel cover) {
         float width = cover.getWidth();
         float height = cover.getHeight();
-        if (height > width)
-            return width;
-        else return height;
+        return Math.min(height, width);
     }
 
     private float getBiggestSide(CoverModel cover) {
         float width = cover.getWidth();
         float height = cover.getHeight();
-        if (height < width)
-            return width;
-        else return height;
+        return Math.max(height, width);
     }
 
     private float getDiagonal(CoverModel cover) {
         float width = cover.getWidth();
         float height = cover.getHeight();
-        float diagonal = (float) (Math.pow(width, 2) + Math.pow(height, 2));
-        return diagonal;
+        return (float) (Math.pow(width, 2) + Math.pow(height, 2));
     }
 
 }

@@ -21,11 +21,11 @@ public class CoverController {
         repeat();
     }
 
-    public CoverModel createCover(String name) {
+    private CoverModel createCover(String name) {
         return new CoverModel(createSide(name), createSide(name));
     }
 
-    public float createSide(String name) {
+    private float createSide(String name) {
         info.getInfo(name);
         float side = new Input().getNumber();
         while (!validator.isValidNumber(side)) {
@@ -35,7 +35,7 @@ public class CoverController {
         return side;
     }
 
-    public void compare() {
+    private void compare() {
         CoverModel coverOne = createCover("first");
         CoverModel coverTwo = createCover("second");
         info.getQuestion();
@@ -46,7 +46,7 @@ public class CoverController {
         }
     }
 
-    public void repeat() {
+    private void repeat() {
         String exit;
         info.getRequest();
         exit = input.getAnswer();
