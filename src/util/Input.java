@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Input {
 
-    Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
     public float getNumber() {
         try {

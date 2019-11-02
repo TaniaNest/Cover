@@ -1,11 +1,11 @@
 package model;
 
-public class Cover {
+public class CoverModel {
 
     private float width;
     private float height;
 
-    public Cover(float width, float height) {
+    public CoverModel(float width, float height) {
         this.width = width;
         this.height = height;
     }

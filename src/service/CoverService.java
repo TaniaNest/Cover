@@ -1,11 +1,10 @@
 package service;
 
-import controller.Controller;
-import model.Cover;
+import model.CoverModel;
 
-public class Service {
+public class CoverService {
 
-    public boolean takenAction(Cover coverOne, Cover coverTwo) {
+    public boolean takenAction(CoverModel coverOne, CoverModel coverTwo) {
 
         if (getBiggestSide(coverOne) > getBiggestSide(coverTwo) && getSmallerSide(coverOne) > getSmallerSide(coverTwo)) {
             return true;
@@ -20,7 +19,7 @@ public class Service {
         }
     }
 
-    private float getSmallerSide(Cover cover) {
+    private float getSmallerSide(CoverModel cover) {
         float width = cover.getWidth();
         float height = cover.getHeight();
         if (height > width)
@@ -28,7 +27,7 @@ public class Service {
         else return height;
     }
 
-    private float getBiggestSide(Cover cover) {
+    private float getBiggestSide(CoverModel cover) {
         float width = cover.getWidth();
         float height = cover.getHeight();
         if (height < width)
@@ -36,7 +35,7 @@ public class Service {
         else return height;
     }
 
-    private float getDiagonal(Cover cover) {
+    private float getDiagonal(CoverModel cover) {
         float width = cover.getWidth();
         float height = cover.getHeight();
         float diagonal = (float) (Math.pow(width, 2) + Math.pow(height, 2));
