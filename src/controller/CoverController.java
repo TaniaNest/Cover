@@ -27,10 +27,10 @@ public class CoverController {
 
     private float createSide(String name) {
         info.getInfo(name);
-        float side = new Input().getNumber();
+        float side = input.getNumber();
         while (!validator.isValidNumber(side)) {
             instruction.getInstruction();
-            side = new Input().getNumber();
+            side = input.getNumber();
         }
         return side;
     }
